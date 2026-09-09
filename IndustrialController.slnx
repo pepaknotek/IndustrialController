@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="IndustrialController.vcxproj" Id="47234608-0770-4ee0-85d9-7c17654f3927" />
+</Solution>
