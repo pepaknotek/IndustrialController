@@ -13,7 +13,7 @@ int main()
     double teploty[PocetTeplot] = { 75, 65, 75, 95, 85, 65, 75, 95, 85, 65, 75, 65 };
     for (int i = 0; i < PocetTeplot; i++) {
         temperatureSensor.setTemperature(teploty[i]);
-        temperature = temperatureSensor.readTemperature();
+        temperature = temperatureSensor.readSensor();
         controller.update(temperature);
         std::cout << "Temperature: " << temperature << std::endl;
         std::cout << "System state: " << controller.toString(controller.getState()) << std::endl;

@@ -1,12 +1,12 @@
 #pragma once
-#include "ITemperatureSensor.h"
+#include "Isensor.h"
 
 
 
-class TemperatureSensor : public ITemperatureSensor
+class TemperatureSensor : public ISensor
 {
 public:
-    double readTemperature() override;
+    double readSensor() override;
     void setTemperature(double temperature);
 private:
     double temperature = 23.7;

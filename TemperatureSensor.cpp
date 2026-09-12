@@ -1,6 +1,6 @@
 #include "TemperatureSensor.h"
 
-double TemperatureSensor::readTemperature() {
+double TemperatureSensor::readSensor() {
 	return temperature;
 }
 
