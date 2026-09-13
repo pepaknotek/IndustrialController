@@ -1,5 +1,5 @@
 #pragma once
-#include "Isensor.h"
+#include "ISensor.h"
 
 
 

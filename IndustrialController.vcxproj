@@ -141,12 +141,14 @@
   <ItemGroup>
     <ClCompile Include="Controller.cpp" />
     <ClCompile Include="IndustrialController.cpp" />
+    <ClCompile Include="PressureSensor.cpp" />
     <ClCompile Include="TemperatureSensor.cpp" />
     <ClCompile Include="TimeUtils.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Controller.h" />
-    <ClInclude Include="ITemperatureSensor.h" />
+    <ClInclude Include="ISensor.h" />
+    <ClInclude Include="PressureSensor.h" />
     <ClInclude Include="TemperatureSensor.h" />
     <ClInclude Include="TimeUtils.h" />
   </ItemGroup>

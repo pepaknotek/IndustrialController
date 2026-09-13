@@ -5,22 +5,33 @@
 #include <string>
 #include <iostream>
 
-enum SystemState {
-    NORMAL,
-    WARNING,
-    ERROR
-};
+    enum class SystemState {
+        NORMAL,
+        WARNING,
+        ERROR
+    };
+
+    enum class PressureState{
+        NORMAL,
+        LOW_WARNING,
+        LOW_ERROR,
+        HIGH_WARNING,
+        HIGH_ERROR
+    };
 
 class Controller
 {
 public:
-    void update(double temperature);
+    void updateTemperature(double temperature);
+    void updatePressure(double pressure);
     const char* toString(SystemState state);
     SystemState getState() const;
     
 private:
-    SystemState evaluate(double temperature,SystemState currentState);
-    SystemState state = NORMAL;
+    SystemState evaluateTemperature(double temperature,SystemState currentTemperatureState);
+    PressureState evaluatePressure(double pressure, PressureState currentPressureState);
+    SystemState state = SystemState::NORMAL;
+    PressureState pressureState = PressureState::NORMAL;
     void log(SystemState oldstate, double temperature, SystemState stateTemp);
     std::deque<std::string> logHistory;
 };
